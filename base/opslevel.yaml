@@ -1,6 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  name:  my-opslevel-report-deploy
   generateName: app-opslevel-report-deploy
   annotations:
     argocd.argoproj.io/hook: PostSync
