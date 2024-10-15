@@ -20,6 +20,8 @@ spec:
         - "${OPSLEVEL_INTEGRATION_URL}"
         - "-s"
         - "JBTest"
+        - "--f"
+        - "abc"
         env:
           - name: OPSLEVEL_INTEGRATION_URL
             valueFrom:
