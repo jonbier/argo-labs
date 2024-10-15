@@ -12,18 +12,18 @@ spec:
       - name: opslevel-report-deploy
         image: public.ecr.aws/opslevel/cli:latest
         command:
-          - "opslevel"
-          - "create"
-          - "deploy"
-          - "-i"
-          - "${OPSLEVEL_INTEGRATION_URL}"
-          - "-s"
-          - "JBTest"
-          env:
-            - name: OPSLEVEL_INTEGRATION_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ops-level
-                  key: url
+        - "opslevel"
+        - "create"
+        - "deploy"
+        - "-i"
+        - "${OPSLEVEL_INTEGRATION_URL}"
+        - "-s"
+        - "JBTest"
+        env:
+          - name: OPSLEVEL_INTEGRATION_URL
+            valueFrom:
+              secretKeyRef:
+                name: ops-level
+                key: url
       restartPolicy: Never
   backoffLimit: 2
