@@ -18,8 +18,10 @@ spec:
         - "deploy"
         - "-i"
         - "${OPSLEVEL_INTEGRATION_URL}"
+        - "-e"
+        - "staging"
         - "-s"
-        - "JBTest"
+        - "jbtest"
         - "-f"
         - "abc"
         env:
