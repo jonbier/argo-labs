@@ -16,13 +16,12 @@ spec:
         - "opslevel"
         - "create"
         - "deploy"
-        - "-i"
+        - "--integration-url"
         - "${OPSLEVEL_INTEGRATION_URL}"
-        - "--environment"
-        - "staging"
         - "-s"
-        - "jbtest"
-        - "--dry-run"
+        - "JBTest"
+        - "--environment"
+        - "Prod"
         env:
           - name: OPSLEVEL_INTEGRATION_URL
             valueFrom:
@@ -30,4 +29,4 @@ spec:
                 name: ops-level
                 key: url
       restartPolicy: Never
-  backoffLimit: 2
+  backoffLimit: 1
