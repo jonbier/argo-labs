@@ -22,6 +22,7 @@ spec:
         - "staging"
         - "-s"
         - "jbtest"
+        - "--dry-run"
         env:
           - name: OPSLEVEL_INTEGRATION_URL
             valueFrom:
