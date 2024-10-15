@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: app-opslevel-report-deploy
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: opslevel-report-deploy
+        image: public.ecr.aws/opslevel/cli:latest
+        command:
+          - "opslevel"
+          - "create"
+          - "deploy"
+          - "-i"
+          - "${OPSLEVEL_INTEGRATION_URL}"
+          - "-s"
+          - "JBTest"
+          env:
+            - name: OPSLEVEL_INTEGRATION_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ops-level
+                  key: url
+      restartPolicy: Never
+  backoffLimit: 2
