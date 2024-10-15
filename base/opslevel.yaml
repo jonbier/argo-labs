@@ -22,8 +22,6 @@ spec:
         - "staging"
         - "-s"
         - "jbtest"
-        - "-f"
-        - "abc"
         env:
           - name: OPSLEVEL_INTEGRATION_URL
             valueFrom:
