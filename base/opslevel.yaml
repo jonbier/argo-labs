@@ -27,4 +27,4 @@ spec:
                 name: ops-level
                 key: url
       restartPolicy: Never
-  backoffLimit: 10
+  backoffLimit: 2
