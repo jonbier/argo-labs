@@ -14,4 +14,3 @@ patches:
 - path: service.yaml
 - path: preview-service.yaml
 - path: rollout.yaml
-- path: opslevel.yaml
