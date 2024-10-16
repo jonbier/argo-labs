@@ -4,5 +4,4 @@ resources:
 - rollout.yaml
 - service.yaml
 - preview-service.yaml
-- opslevel.yaml
 - opslevel-generic.yaml
