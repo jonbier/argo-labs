@@ -19,7 +19,7 @@ spec:
         - "--integration-url"
         - "${OPSLEVEL_INTEGRATION_URL}"
         - "-s"
-        - "JBTest"
+        - "jbtest"
         - "--environment"
         - "Prod"
         env:
